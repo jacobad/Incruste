@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EA8F4F822C640B400F3D0E9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8F4F622C640B300F3D0E9 /* UserViewController.swift */; };
+		4EA8F4F922C640B400F3D0E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8F4F722C640B400F3D0E9 /* MapViewController.swift */; };
+		4EA8F4FD22C6416E00F3D0E9 /* PropositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8F4FC22C6416E00F3D0E9 /* PropositionViewController.swift */; };
+		4EA8F4FF22C6426500F3D0E9 /* AjouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8F4FE22C6426500F3D0E9 /* AjouterViewController.swift */; };
+		4EA8F50122C642B300F3D0E9 /* FiltreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8F50022C642B300F3D0E9 /* FiltreViewController.swift */; };
 		54CBF77722C6148C004D93C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBF77622C6148C004D93C2 /* AppDelegate.swift */; };
 		54CBF77922C6148C004D93C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBF77822C6148C004D93C2 /* ViewController.swift */; };
 		54CBF77C22C6148C004D93C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CBF77A22C6148C004D93C2 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EA8F4F622C640B300F3D0E9 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		4EA8F4F722C640B400F3D0E9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4EA8F4FC22C6416E00F3D0E9 /* PropositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropositionViewController.swift; sourceTree = "<group>"; };
+		4EA8F4FE22C6426500F3D0E9 /* AjouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjouterViewController.swift; sourceTree = "<group>"; };
+		4EA8F50022C642B300F3D0E9 /* FiltreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltreViewController.swift; sourceTree = "<group>"; };
 		54CBF77322C6148C004D93C2 /* Incruste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Incruste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CBF77622C6148C004D93C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CBF77822C6148C004D93C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +76,11 @@
 			children = (
 				54CBF77622C6148C004D93C2 /* AppDelegate.swift */,
 				54CBF77822C6148C004D93C2 /* ViewController.swift */,
+				4EA8F4F722C640B400F3D0E9 /* MapViewController.swift */,
+				4EA8F4FE22C6426500F3D0E9 /* AjouterViewController.swift */,
+				4EA8F50022C642B300F3D0E9 /* FiltreViewController.swift */,
+				4EA8F4F622C640B300F3D0E9 /* UserViewController.swift */,
+				4EA8F4FC22C6416E00F3D0E9 /* PropositionViewController.swift */,
 				54CBF77A22C6148C004D93C2 /* Main.storyboard */,
 				54CBF79022C61C43004D93C2 /* user.storyboard */,
 				54CBF78D22C61C1D004D93C2 /* proposition.storyboard */,
@@ -156,7 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54CBF77922C6148C004D93C2 /* ViewController.swift in Sources */,
+				4EA8F4F822C640B400F3D0E9 /* UserViewController.swift in Sources */,
+				4EA8F4FD22C6416E00F3D0E9 /* PropositionViewController.swift in Sources */,
+				4EA8F50122C642B300F3D0E9 /* FiltreViewController.swift in Sources */,
+				4EA8F4FF22C6426500F3D0E9 /* AjouterViewController.swift in Sources */,
 				54CBF77722C6148C004D93C2 /* AppDelegate.swift in Sources */,
+				4EA8F4F922C640B400F3D0E9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

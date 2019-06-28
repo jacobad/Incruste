@@ -13,7 +13,7 @@
         <!--rtrfh-->
         <scene sceneID="eke-oz-pt4">
             <objects>
-                <viewController id="Z9f-Qc-qyh" sceneMemberID="viewController">
+                <viewController id="Z9f-Qc-qyh" customClass="PropositionViewController" customModule="Incruste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNn-TZ-qca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
