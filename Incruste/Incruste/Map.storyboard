@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter"/>
                                 <connections>
-                                    <segue destination="M6X-9d-nMd" kind="show" id="vIm-Ke-ye1"/>
+                                    <segue destination="BfE-B6-rwE" kind="show" id="ueV-rh-4mx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,13 +48,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="jTO-gf-Tx5"/>
-                    <connections>
-                        <outlet property="AddMap" destination="Pny-fQ-IBC" id="pHo-Vn-nz5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841" y="875"/>
+            <point key="canvasLocation" x="2840.579710144928" y="874.55357142857144"/>
         </scene>
         <!--filtre-->
         <scene sceneID="0ti-VZ-9bC">
@@ -64,13 +61,13 @@
             </objects>
             <point key="canvasLocation" x="3743" y="457"/>
         </scene>
-        <!--Ajouter-->
-        <scene sceneID="Uek-X0-C4a">
+        <!--ajouter-->
+        <scene sceneID="Inl-Lr-k3P">
             <objects>
-                <viewControllerPlaceholder storyboardName="Ajouter" id="M6X-9d-nMd" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7hP-yF-9dI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ajouter" id="BfE-B6-rwE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VN-9I-aNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3904" y="1156"/>
+            <point key="canvasLocation" x="3950" y="880"/>
         </scene>
     </scenes>
 </document>
