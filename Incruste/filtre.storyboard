@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Filtre View Controller-->
         <scene sceneID="wDk-Lh-cwz">
             <objects>
-                <viewController id="NCv-td-JDV" sceneMemberID="viewController">
+                <viewController id="NCv-td-JDV" customClass="filtreViewController" customModule="Incruste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4gP-mr-XYI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

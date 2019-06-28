@@ -13,13 +13,21 @@
         <!--Item-->
         <scene sceneID="uir-kX-4Tp">
             <objects>
-                <viewController id="2Jn-W9-t5W" sceneMemberID="viewController">
+                <viewController id="2Jn-W9-t5W" customClass="favoriViewController" customModule="Incruste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mb-yd-8y8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-xL-Yil">
+                                <rect key="frame" x="0.0" y="97" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2Jn-W9-t5W" id="6Pe-pN-QDE"/>
+                                </connections>
+                            </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favori page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-gd-0Ie">
-                                <rect key="frame" x="165" y="165" width="89" height="21"/>
+                                <rect key="frame" x="163" y="187" width="89" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -30,8 +38,20 @@
                         <viewLayoutGuide key="safeArea" id="bjx-jr-V78"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kqe-1V-NOC"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="DdA-4a-D8B" id="AYu-H2-GeA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mag-cn-wVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="DdA-4a-D8B">
+                    <connections>
+                        <outlet property="delegate" destination="2Jn-W9-t5W" id="KMz-yd-DeI"/>
+                        <outlet property="searchBar" destination="Jbp-xL-Yil" id="aJ5-kY-02u"/>
+                        <outlet property="searchContentsController" destination="2Jn-W9-t5W" id="oN2-6c-o2B"/>
+                        <outlet property="searchResultsDataSource" destination="2Jn-W9-t5W" id="2hb-VT-W3d"/>
+                        <outlet property="searchResultsDelegate" destination="2Jn-W9-t5W" id="L4S-wF-sdI"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4587" y="242"/>
         </scene>
