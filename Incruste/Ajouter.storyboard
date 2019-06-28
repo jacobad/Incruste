@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ajouter View Controller-->
         <scene sceneID="a1r-yw-JNa">
             <objects>
-                <viewController id="WFJ-wS-W6w" sceneMemberID="viewController">
+                <viewController id="WFJ-wS-W6w" customClass="ajouterViewController" customModule="Incruste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="21N-qB-qYn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
