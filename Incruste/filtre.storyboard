@@ -18,8 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filtre page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bf-WZ-oNJ">
-                                <rect key="frame" x="186" y="220" width="81" height="21"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-D6-vCs">
+                                <rect key="frame" x="0.0" y="59" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NCv-td-JDV" id="ngw-Of-M5z"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgp-M0-sNI">
+                                <rect key="frame" x="20" y="137" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -29,8 +37,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1uP-Q5-mAf"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="P0m-zk-pnc" id="ssR-PB-xX8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6e-y7-Lcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="P0m-zk-pnc">
+                    <connections>
+                        <outlet property="delegate" destination="NCv-td-JDV" id="qIA-2J-6U3"/>
+                        <outlet property="searchBar" destination="qjl-D6-vCs" id="5OS-qT-kg6"/>
+                        <outlet property="searchContentsController" destination="NCv-td-JDV" id="GBM-vs-SXh"/>
+                        <outlet property="searchResultsDataSource" destination="NCv-td-JDV" id="EBV-sW-bBq"/>
+                        <outlet property="searchResultsDelegate" destination="NCv-td-JDV" id="boi-cL-bwi"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3743" y="457"/>
         </scene>
