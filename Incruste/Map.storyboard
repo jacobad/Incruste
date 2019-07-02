@@ -48,6 +48,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="jTO-gf-Tx5"/>
+                    <connections>
+                        <outlet property="mapView" destination="Pny-fQ-IBC" id="Lbe-Mq-qwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

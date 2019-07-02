@@ -23,6 +23,7 @@
 		54CBF79E22C65313004D93C2 /* favoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBF79D22C65313004D93C2 /* favoriViewController.swift */; };
 		54CBF7A222C65369004D93C2 /* ajouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBF7A122C65369004D93C2 /* ajouterViewController.swift */; };
 		54CBF7A422C65394004D93C2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBF7A322C65394004D93C2 /* MapViewController.swift */; };
+		E57FDE7A22CBA9F900F5BE65 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FDE7922CBA9F900F5BE65 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		54CBF79D22C65313004D93C2 /* favoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriViewController.swift; sourceTree = "<group>"; };
 		54CBF7A122C65369004D93C2 /* ajouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajouterViewController.swift; sourceTree = "<group>"; };
 		54CBF7A322C65394004D93C2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E57FDE7922CBA9F900F5BE65 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				54CBF77D22C6148C004D93C2 /* Assets.xcassets */,
 				54CBF77F22C6148C004D93C2 /* LaunchScreen.storyboard */,
 				54CBF78222C6148C004D93C2 /* Info.plist */,
+				E57FDE7922CBA9F900F5BE65 /* Activity.swift */,
 			);
 			path = Incruste;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				54CBF77722C6148C004D93C2 /* AppDelegate.swift in Sources */,
 				0E3AEB9D22CB432100927638 /* SearchFilterVC.swift in Sources */,
 				54CBF79E22C65313004D93C2 /* favoriViewController.swift in Sources */,
+				E57FDE7A22CBA9F900F5BE65 /* Activity.swift in Sources */,
 				54CBF7A422C65394004D93C2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
