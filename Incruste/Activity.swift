@@ -22,6 +22,7 @@ enum SportType {
 struct Activity {
     let sportType: SportType
     let name: String
+    let sousTitre: String
     let address: String
     let niveau: Int
     var urgence: Int
@@ -42,10 +43,8 @@ class ActivityAnnotation: NSObject, MKAnnotation {
     var title: String? {
         return activity.name
     }
+    var subtitle: String? {
+        return activity.sousTitre
+    }
     
 }
-
-
-
-
-
