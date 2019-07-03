@@ -44,7 +44,7 @@ class ActivityAnnotation: NSObject, MKAnnotation {
         return activity.name
     }
     var subtitle: String? {
-        return activity.sousTitre
+        return activity.address
     }
     
 }

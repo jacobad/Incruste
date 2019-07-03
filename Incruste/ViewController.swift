@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         //        }
         
         // 2- REMPLIR AU FUR ET A MESURE QU'ON CREE LES PROPOSITIONS ou vider si on les delete:
-        activities = [ Activity(sportType: .foot, name: "Formation foot", sousTitre: "Test", address: "55 avenue de montreuil", niveau: 2, urgence: 3, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.859858726171105, longitude: 2.436545)),
+        activities = [ Activity(sportType: .foot, name: "Formation foot - 🏆🏆🏆", sousTitre: "-", address: "55 avenue de montreuil", niveau: 2, urgence: 3, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.859858726171105, longitude: 2.436545)),
                        
                        Activity(sportType: .basket, name: "vvvv", sousTitre: "Tes2", address: "31 avenue de l'opera", niveau: 2, urgence: 2, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.854607, longitude: 2.4333))
         ]
