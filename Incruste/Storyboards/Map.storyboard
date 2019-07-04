@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Incruste" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,38 +23,40 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp9-fo-n8E">
-                                <rect key="frame" x="323" y="698" width="35" height="30"/>
+                                <rect key="frame" x="44" y="61" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Filtre"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="PyK-EN-6hM" kind="show" id="lZo-v9-sg2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-Nx-xqq">
-                                <rect key="frame" x="323" y="660" width="68" height="30"/>
+                                <rect key="frame" x="60" y="752" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Actualiser"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tai-Vu-Fe1">
-                                <rect key="frame" x="323" y="736" width="50" height="29"/>
+                                <rect key="frame" x="326" y="62" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ajouter"/>
                                 <connections>
-                                    <segue destination="BfE-B6-rwE" kind="show" id="ueV-rh-4mx"/>
+                                    <segue destination="Suj-l4-qOc" kind="showDetail" id="90T-BU-6tv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jTO-gf-Tx5"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="carte" id="jTO-gf-Tx5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="actualiser" destination="dYo-Nx-xqq" id="beM-fo-sN1"/>
+                        <outlet property="ajout" destination="tai-Vu-Fe1" id="PNo-ia-rIg"/>
+                        <outlet property="filtre" destination="Qp9-fo-n8E" id="hgv-4j-PGl"/>
                         <outlet property="mapView" destination="Pny-fQ-IBC" id="Lbe-Mq-qwv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2840.579710144928" y="874.55357142857144"/>
+            <point key="canvasLocation" x="2903" y="875"/>
         </scene>
         <!--filtre-->
         <scene sceneID="0ti-VZ-9bC">
@@ -62,15 +64,18 @@
                 <viewControllerPlaceholder storyboardName="filtre" id="PyK-EN-6hM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYA-VP-qd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743" y="457"/>
+            <point key="canvasLocation" x="3568" y="823"/>
         </scene>
-        <!--ajouter-->
-        <scene sceneID="Inl-Lr-k3P">
+        <!--Ajouter-->
+        <scene sceneID="D59-U4-g5J">
             <objects>
-                <viewControllerPlaceholder storyboardName="ajouter" id="BfE-B6-rwE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2VN-9I-aNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Ajouter" id="Suj-l4-qOc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTA-LN-xCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3950" y="880"/>
+            <point key="canvasLocation" x="3463" y="1042"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="carte" width="45" height="45"/>
+    </resources>
 </document>

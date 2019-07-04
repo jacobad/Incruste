@@ -24,16 +24,17 @@ struct Activity {
     let name: String
     let sousTitre: String
     let address: String
+    var date: NSDate
     let niveau: Int
     var urgence: Int
     var favori: Bool
     var panier: Bool
-    let gps: CLLocationCoordinate2D
+    let gps: CLLocationCoordinate2D    
 }
 
 class ActivityAnnotation: NSObject, MKAnnotation {
     
-    let activity: Activity
+    var activity: Activity
     init(activity: Activity) {
         self.activity = activity
     }

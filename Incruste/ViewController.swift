@@ -9,11 +9,11 @@
 // ---DEBUG GPS
 // ---CHOISIR UNE AUTRE COULEUR QUE LE ROUGE POUR LES ACTIVITES URGENTES?
 // ---CONFIG POUR LES SPORTS
-// DECIDER POUR LES FAVORIS
+// ---DECIDER POUR LES FAVORIS
 // DEPLACER LA CONVERSION GPS OU IL FAUT
 // TESTER EN CREANT UNE PROPOSITION
 // DISPLAY UN PANIER OU DES FAVORIS
-// CLICK SUR UN POINT --> AFFICHER EN DETAIL ET METTRE DANS SON PANIER OU FAV
+// ---CLICK SUR UN POINT --> AFFICHER EN DETAIL ET METTRE DANS SON PANIER OU FAV
 // DEPUIS LE PANIER OU FAVORIS CHOISIR/RETIRER UNE ACTIVITE
 // DEPUIS LE PANIER OU FAVORIS CHOISIR/RETIRER UN FAVORI
 // VIDER DU PANIER A QUEL MOMENT?
@@ -24,15 +24,26 @@ import CoreLocation // import du core de localisation
 
 class ViewController: UIViewController {
     let locationManager = CLLocationManager() // initialisation du manager de localisation
-    
-    
-    //POUR TESTER L'OVERLAY
-    
-    
+
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var actualiser: UIButton!
+    @IBOutlet weak var filtre: UIButton!
+    @IBOutlet weak var ajout: UIButton!
     
+//    var layer: CALayer = viewForLayer.layer
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let actualiserImage = UIImage(named: "actualiser")
+        actualiser.setImage(actualiserImage, for: .normal)
+        
+        super.viewDidLoad()
+        let filtreImage = UIImage(named: "filtre")
+        filtre.setImage(filtreImage, for: .normal)
+        
+        super.viewDidLoad()
+        let ajoutImage = UIImage(named: "ajout")
+        ajout.setImage(ajoutImage, for: .normal)
         
         //INIT LA LOCATION
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters // Distance de la précision de la localisation
@@ -45,7 +56,7 @@ class ViewController: UIViewController {
         
         // 1- TR FROM ADDRESS TO GPS A APPELER QUAND ON CREE LES PROPOSITIONS:
         
-        var activities = [Activity]()
+//        var activities = [Activity]()
         var urgence : Int
         
         let type = SportType.foot
@@ -83,23 +94,21 @@ class ViewController: UIViewController {
         //        }
         
         // 2- REMPLIR AU FUR ET A MESURE QU'ON CREE LES PROPOSITIONS ou vider si on les delete:
-        activities = [ Activity(sportType: .foot, name: "Formation foot - 🏆🏆🏆", sousTitre: "-", address: "55 avenue de montreuil", niveau: 2, urgence: 3, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.859858726171105, longitude: 2.436545)),
-                       
-                       Activity(sportType: .basket, name: "vvvv", sousTitre: "Tes2", address: "31 avenue de l'opera", niveau: 2, urgence: 2, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.854607, longitude: 2.4333))
-        ]
+//        activities = [ Activity(sportType: .foot, name: "Formation foot - 🏆🏆🏆", sousTitre: "-", address: "55 avenue de montreuil", date: NSDate(), niveau: 2, urgence: 3, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.859858726171105, longitude: 2.436545)),
+//
+//                       Activity(sportType: .basket, name: "vvvv", sousTitre: "Tes2", address: "31 avenue de l'opera", date: NSDate(), niveau: 2, urgence: 2, favori: false, panier: false, gps: CLLocationCoordinate2D(latitude: 48.854607, longitude: 2.4333))
+//        ]
         
         
         //POUR TESTER L'OVERLAY
-        let activite = activities [0]
         
         // LES AFFICHER - LA MAP RECOIT JUSTE UN ARRAY (AVEC UN SEGUE)?
-        loadActivitiesOnMap(activities: activities)
+        loadActivitiesOnMap(activities: allActivities)
+
         
     }
     
-    func processActivity(_ activity: Activity) {
-        
-    }
+
     
     
     func getLocation(from address: String, completion: @escaping (_ location: CLLocationCoordinate2D?) -> Void) {
@@ -198,26 +207,65 @@ extension ViewController : MKMapViewDelegate {
                     marker!.glyphImage = photoProfil
                     timeColor()
                 }
-                
             } else {
                 marker!.annotation = annotation
             }
-            let imageFavori = UIImage(named: "favori")
-            let btn = UIButton(type: .custom)
-                btn.setImage(imageFavori, for: .normal)
+            // BOUTON FAV A GAUCHE
+//            let imageFavori = UIImage(named: "favori")
+            let btnFav = UIButton(type: .custom)
+            btnFav.setTitle("☆", for: .normal)
+            btnFav.setTitle("★", for: .selected)
+            btnFav.setTitleColor(.black, for: .normal)
+            btnFav.setTitleColor(.orange, for: .selected)
+            //btn.setImage(imageFavori, for: .normal)
             let sizeFavori = CGSize(width: 30, height: 30)
-                btn.frame = CGRect(origin: .zero, size: sizeFavori)
-                marker!.rightCalloutAccessoryView = btn
-
-//            marker!.leftCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            btnFav.frame = CGRect(origin: .zero, size: sizeFavori)
+            marker!.leftCalloutAccessoryView = btnFav
             
+            // BOUTON GO A DROITE
+//            let imageGo = UIImage(named: "favori")
+            let btnGo = UIButton(type: .custom)
+            btnGo.setTitle("▶️", for: .normal)
+            btnGo.setTitle("▶️", for: .selected)
+            btnGo.setTitleColor(.blue, for: .normal)
+            btnGo.setTitleColor(.black, for: .selected)
+            //btn.setImage(imageFavori, for: .normal)
+            let sizeGo = CGSize(width: 30, height: 30)
+            btnGo.frame = CGRect(origin: .zero, size: sizeFavori)
+            marker!.rightCalloutAccessoryView = btnGo
+
             return marker
         }
         return nil
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("🤓", view)
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    {
+        control.isSelected.toggle()
+        
+        let clickedAnnotation = view.annotation as! ActivityAnnotation
+        var newActivity = clickedAnnotation.activity
+        
+        
+        if let myActivity = view.annotation as? ActivityAnnotation {
+            
+            if view.leftCalloutAccessoryView == control
+            {
+                newActivity.favori.toggle()
+                allActivities.removeAll { (item) -> Bool in
+                    return item.name == newActivity.name
+                }
+                allActivities.append(newActivity)
+            }
+            
+            if view.rightCalloutAccessoryView == control
+            {
+                myActivity.activity.panier = !myActivity.activity.panier
+//                faire ouvrir l'app MAP pour l'itinaire
+            }
+            print("Fav : ", myActivity.activity.favori)
+            print("Papa : ", myActivity.activity.panier)
+        }
     }
 }
 
@@ -226,8 +274,6 @@ extension ViewController : MKMapViewDelegate {
 extension ViewController : CLLocationManagerDelegate {
     // fonction qui permet de prendre les donnée de localité
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last!
         
         if let location = locations.first {
             let spanUser = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
@@ -248,5 +294,3 @@ extension ViewController : CLLocationManagerDelegate {
         
     }
 }
-
-

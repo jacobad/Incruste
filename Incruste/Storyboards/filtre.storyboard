@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Wk-oA-2sa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76E-u6-OhI">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="3Bv-NL-ZHu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="d4m-Ua-D5k" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPY-pq-nK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3912" y="1176"/>
+        </scene>
         <!--Search FilterVC-->
         <scene sceneID="Fcm-eP-Lwf">
             <objects>
@@ -19,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="nC7-G0-f2s">
+                            <tableViewSection headerTitle="Sport" id="nC7-G0-f2s">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kHT-SY-xdk">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
@@ -206,12 +214,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRP-lo-Hxr">
-                                                    <rect key="frame" x="183" y="236" width="48" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <state key="normal" title="Go !"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -223,6 +225,13 @@
                             <outlet property="delegate" destination="7Wk-oA-2sa" id="5RW-Lg-q2C"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="n9k-yk-bb3">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="DYc-nw-CDr">
+                            <connections>
+                                <action selector="doneClicked:" destination="7Wk-oA-2sa" id="LcX-jl-lj1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="basket" destination="CLe-wL-hAX" id="Ade-B0-GrJ"/>
                         <outlet property="football" destination="kHT-SY-xdk" id="qvk-XH-ZDL"/>
@@ -231,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ms4-cM-usx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3911.594202898551" y="776.78571428571422"/>
+            <point key="canvasLocation" x="5078" y="777"/>
         </scene>
         <!--Title-->
         <scene sceneID="dce-PN-slH">
@@ -375,7 +384,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vc-iy-57W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4687" y="777"/>
+            <point key="canvasLocation" x="6014" y="777"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WE5-2o-j7n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76E-u6-OhI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PJe-Bx-bjZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Wk-oA-2sa" kind="relationship" relationship="rootViewController" id="1oE-0r-5eW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OG4-9L-YZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3911.594202898551" y="776.78571428571422"/>
         </scene>
     </scenes>
 </document>

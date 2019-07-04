@@ -13,7 +13,7 @@ class SearchFilterVC: UITableViewController {
     @IBOutlet weak var football: UITableViewCell!
     @IBOutlet weak var basket: UITableViewCell!
     @IBOutlet weak var tennis: UITableViewCell!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,6 +25,9 @@ class SearchFilterVC: UITableViewController {
         } else {
             return false
         }
+    }
+    @IBAction func doneClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
